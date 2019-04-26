@@ -1,14 +1,23 @@
 # SimMon
-Simply tool for monitoring website and alerts to Telegram chat
 
+SimMon - простая утилита, предназначенная для базового мониторинга веб-сайта. Её функционал прост:
 
+1) Каждые 5 секунд выполняется проверка доступности URL и поиск заданной строки в ответе;
+2) Каждые 60 секунд, если проверка сайта завершилась с ошибкой, отправляется сообщение (в чат или конкретному пользователю) Telegram, используя Telegram Bot.
 
+Как пользоваться данной утилитой:
 
+1) Необходимо создать своего бота в Telegram. Для этого необходимо добавить другого бота под названием BotFather. Отправляем ему команду /newbot, указываем имя, которое будет отображаться в списке контактов, и адрес. Например, «Monitoring Bot» с адресом «my_monitoring_bot». Если адрес не занят, а имя введено правильно, BotFather пришлет в ответ сообщение с токеном — «ключом» для доступа к созданному боту. Его нужно сохранить и никому не показывать;
 
-Set configuration in file config.json
+2) Необходимо узнать chat id
 
-    "bot_token": "<Enter your Telegram bot token>",
-    "chat_id": "<Enter Telegram chat id>",
-    "url": "<Enter url website for monitoring>",
-    "find_string": "<Enter find string>",
-    "proxy": "<Enter proxy server if requred. Example: socks5://login_simon:pass_simmon@111.111.111.111:10488>"
+3) Склонировать данный репозиторий;
+
+4) Указать персональные настройки в конфигурационном файле 'config.json'
+
+"bot_token": "<Enter your Telegram bot token>", 
+"chat_id": "<Enter Telegram chat id>",
+"url": "<Enter url website for monitoring>",
+"find_string": "<Enter find string>",
+"proxy": "<Enter proxy server if requred. Example: socks5://login_simon:pass_simmon@111.111.111.111:10488>"
+

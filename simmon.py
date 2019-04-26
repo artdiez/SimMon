@@ -52,7 +52,6 @@ class WebCheckBot:
           r.raise_for_status
           find = len(re.findall(self.config["find_string"],r.text))
           stats.append(find)
-          print(stats) #Debug
           time.sleep(5)
 
 if __name__ == "__main__":  

@@ -3,5 +3,7 @@
     "chat_id": "",
     "url": "",
     "find_string": "",
+    "check_timeout": "",
+    "alert_timeout": "",
     "proxy": ""
 }
